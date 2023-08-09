@@ -1,0 +1,170 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;600&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    font-family: "Montserrat", sans-serif;
+    scroll-behavior: smooth;
+  }
+  .open {
+    height: 17rem !important;
+  }
+  .Myopen {
+    height: 10rem !important;
+    /* background-color: skyblue; */
+  }
+  .para {
+    background-color: skyblue;
+  }
+}
+/* body {
+  scroll-behavior: smooth;
+} */
+.myclass {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  /* margin: 12px; */
+}
+
+.App {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  background-color: #85a8c5;
+}
+
+.carousel {
+  overflow: hidden;
+  width: 700px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.inner {
+  white-space: nowrap;
+  transition: transform 0.3s;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.carousel-item {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 490px;
+  background-color: #fff;
+}
+
+.carousel-item-text {
+  font-size: 1.15rem;
+  margin: 40px 0 40px 0;
+  padding: 0 20px 0 20px;
+  white-space: normal;
+  color: #617d98;
+}
+.carousel-img {
+  width: 250px;
+  padding: 0 20px 0 20px;
+}
+
+/* final stage */
+
+.carousel-buttons {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.button-arrow {
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.indicators {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.indicator-buttons {
+  border: none;
+  cursor: pointer;
+}
+
+.indicators > button {
+  margin: 5px;
+  background: none;
+}
+
+.indicator-symbol {
+  color: #26343f;
+}
+
+.indicator-symbol-active {
+  color: #ffffff;
+}
+/* .rotate {
+  animation: rotate 1s linear infinite;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+} */
+.circular-progress {
+  position: relative;
+  border-radius: 50%;
+  /* background: conic-gradient(#7d2ae8 3.6deg, #ededed 0deg); */
+  /* display: flex; */
+  /* align-items: center; */
+  /* justify-content: center; */
+  border: 1px solid black;
+}
+.circular-progress::before {
+  content: "";
+  position: absolute;
+  /* height: 135px; */
+  /* width: 135px; */
+  border-radius: 50%;
+  background-color: #fff;
+}
+.progress-value {
+  position: relative;
+  font-size: 40px;
+  font-weight: 600;
+  color: #7d2ae8;
+}
+.text {
+  font-size: 30px;
+  font-weight: 500;
+  color: #606060;
+}
+.mob-nav {
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  background: #000;
+}
+
+.animate-progress {
+  animation: animate-progress 1s linear forwards;
+  animation-fill-mode: forwards;
+}
+
+@keyframes animate-progress {
+  to {
+    clip: rect(0px, 36px, 36px, 18px);
+  }
+}
